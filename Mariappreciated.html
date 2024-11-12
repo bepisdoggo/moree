@@ -6,7 +6,7 @@
   <title>Counter for Mari</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Product Sans, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -18,10 +18,10 @@
     .counter-box {
       text-align: center;
       padding: 20px;
-      border: 2px solid #333;
+      border: 2px solid #e63946;
       border-radius: 8px;
-      background-color: #333;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      background-color: #333333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     }
     h1 {
       font-size: 24px;
@@ -37,7 +37,7 @@
 
 <div class="counter-box">
   <h1>Times Mari has been appreciated</h1>
-  <p class="count" id="visitCount">0</p>
+  <p class="count" id="visitCount">∞ + 0</p>
 </div>
 
 <script>
@@ -51,8 +51,8 @@
     visitCount = parseInt(visitCount) + 1;
   }
 
-  // Update the count display
-  document.getElementById('visitCount').innerText = visitCount;
+  // Update the count display with the "∞ +" prefix
+  document.getElementById('visitCount').innerText = `∞ + ${visitCount}`;
 
   // Save the updated count to localStorage
   localStorage.setItem('mariVisitCount', visitCount);
